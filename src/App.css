@@ -1,0 +1,8 @@
+.fixed-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Agrega aquí cualquier otro estilo adicional que desees */
+  }
+  

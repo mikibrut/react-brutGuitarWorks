@@ -1,0 +1,8 @@
+.layout{
+    display: block;
+    margin: 20px;
+    height: 100vh;
+    background-color: #111;
+    color: #fff;
+    z-index: 10;
+}

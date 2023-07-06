@@ -1,0 +1,80 @@
+body {
+    /* This affects the entire page */
+  background-color: #111;
+  color: #999;
+  font-family:'Poppins', sans-serif;
+  max-width: 1088px;
+  margin:auto;
+  padding:10px;
+  min-height:  200vh;
+  }
+
+  .elevator-transition{
+   animation: repeat 1s forwards;
+    animation-delay: 1s;
+      
+  }
+  
+  .elevator{
+  margin:5em 0;
+    color: #fff;
+    font-family:'Poppins', sans-serif;
+    font-size: 3em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap:10px;
+  
+  }
+ 
+  .elevatorL {
+    text-align: right;
+    left:5em;
+    
+}
+
+@keyframes moveDown {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(0); }
+}
+
+.elevatorR {
+    left:10em;
+    transform: translateY(100vh);
+    animation: moveUp 1s forwards;
+}
+
+@keyframes moveUp {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(0); }
+}
+  
+  .elevatorL-transition{
+      animation: moveLeft .7s forwards;
+  /*   animation-delay:2s; */
+        animation-play-state: paused ;
+    animation-delay:  calc(var(--scroll) * -1s);
+  
+  }
+  .elevatorR-transition{
+      animation: moveRight .7s forwards;
+  /*     animation-delay:2s; */
+        animation-play-state: paused ;
+    animation-delay:  calc(var(--scroll) * -1s);
+  }
+  
+  @keyframes moveLeft {
+        0% {
+          transform: translateX(0px) rotate(0);
+    }
+    100%{
+        transform: translateX(-10em);
+    } 
+  }
+  @keyframes moveRight {
+        0% {
+          transform: translateX(0px) rotate(0);
+    }
+    100%{
+        transform: translateX(10em);
+    } 
+  }
